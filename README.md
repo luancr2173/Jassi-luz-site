@@ -15,7 +15,7 @@ Site one-page de venda para a **Jassi Luz Acessórios** (@jassi_luz), loja de jo
 
 ## Conceito
 
-- **Ideia central:** o logo da marca é um sol nascendo no horizonte. No hero, **a lua toma o lugar do sol**: um pingente de lua crescente em aço dourado, pendurado na corrente, nasce sobre os raios e a linha do horizonte do logo. A joia gira devagar, segue o mouse e, com o scroll, sobe e gira enquanto os raios se abrem e somem.
+- **Ideia central:** o logo da marca é um sol nascendo no horizonte. O hero recria esse sol em 3D, só com os raios finos e a linha do horizonte em oliva, com um brilho leve no ar. Com o scroll, os raios giram, se abrem e somem.
 - **Paleta (tirada do logo):** bege `#e7ddd1` de fundo, oliva `#736115` como cor da marca (títulos, botões, faixa de benefícios, CTA final e rodapé) e branco sobre o oliva. Texto corrido em oliva escuro `#3a300c`.
 - **Layout minimalista** (referência: capimestrela.com.br): barra de aviso fina, logo centralizado com menu pequeno, grade de produtos com foto quadrada e nome pequeno, seções centralizadas com muito respiro, sem tipografia gigante.
 - **Tipografia:** Cormorant Garamond (ecoa a serifa do logo) nos títulos, com itálico nas palavras de ênfase. Instrument Sans no resto.
@@ -39,7 +39,7 @@ Deploy na Vercel: importe o repositório, sem configuração extra.
 content/site.ts          TODOS os textos, contatos, peças e links
 app/layout.tsx           metadata, fontes, JSON-LD (JewelryStore)
 app/page.tsx             monta as seções
-components/scene/        cena 3D da lua (HeroScene) + loader com fallback sem WebGL
+components/scene/        cena 3D dos raios do logo (HeroScene) + loader com fallback sem WebGL
 components/sections/     Hero, Faixa de benefícios, Peças (grade), Por que inox, Como comprar, CTA final, Footer
 components/ui/           Header, WhatsApp flutuante, toggle de animações, Motion (Lenis + GSAP)
 public/fotos/            fotos do Instagram da cliente (640×640)
@@ -52,11 +52,11 @@ Para trocar conteúdo, edite só `content/site.ts`. Para trocar fotos, substitua
 - WhatsApp flutuante + cada peça da grade abre o WhatsApp com mensagem pré-preenchida.
 - SEO: `lang="pt-BR"`, um `h1`, title/description, Open Graph + Twitter (`og-image.jpg` 1200×630), JSON-LD, sitemap e robots.
 - Toggle **Animações: Auto / Desativadas** no rodapé (salvo em `localStorage`; `prefers-reduced-motion` começa desativado). Desativado = sem Lenis, sem ScrollTrigger, cena parada, faixa parada, conteúdo todo visível.
-- Mobile: composição própria da cena (lua no terço superior, título abaixo), fallback em SVG (lua + raios) sem WebGL, canvas pausado fora da tela.
+- Mobile: composição própria da cena (raios no terço superior, título abaixo), fallback em SVG dos raios sem WebGL, canvas pausado fora da tela.
 
 ## Créditos
 
 - Fotos: Instagram @jassi_luz (da própria cliente). São 640px; para mais nitidez, peça os originais.
 - Fontes: Cormorant Garamond e Instrument Sans (SIL Open Font License).
-- Modelo 3D: lua crescente e corrente geradas em código (sem arquivos externos).
+- Cena 3D: raios gerados em código (sem arquivos externos).
 - Revisão visual feita no navegador em 1440×900 e 390×844, com animações em Auto e Desativadas.

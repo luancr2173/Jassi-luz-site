@@ -172,7 +172,6 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 
 .hero__fallback { position: absolute; inset: 0 0 34% 0; display: grid; place-items: end center; color: var(--olive); }
 .hero__fallback-rays { width: min(640px, 92vw); opacity: 0.5; }
-.hero__fallback-moon { position: absolute; width: min(190px, 34vw); bottom: 10%; }
 
 @media (max-width: 860px) {
   .hero { min-height: calc(100svh - 92px); padding-bottom: 36px; }
