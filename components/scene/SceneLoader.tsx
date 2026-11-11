@@ -15,13 +15,19 @@ function hasWebGL() {
   }
 }
 
-/** Fallback estático na mesma composição: raios de sol + coração em traço */
+/** Fallback estático na mesma composição: raios do logo + lua crescente */
 function Fallback() {
   return (
-    <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: 'var(--gold)' }} aria-hidden="true">
-      <SunRays className="" />
-      <svg viewBox="0 0 100 92" width="34%" style={{ position: 'absolute', maxWidth: 260 }} fill="none" stroke="#8d8f95" strokeWidth="5">
-        <path d="M50 86C20 64 6 46 6 28 6 14 17 6 29 6c9 0 16 5 21 12 5-7 12-12 21-12 12 0 23 8 23 22 0 18-14 36-44 58Z" />
+    <div className="hero__fallback" aria-hidden="true">
+      <SunRays className="hero__fallback-rays" count={19} />
+      <svg viewBox="-80 -80 160 160" className="hero__fallback-moon">
+        <defs>
+          <linearGradient id="lua" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#f6e7c4" />
+            <stop offset="1" stopColor="#b79a5a" />
+          </linearGradient>
+        </defs>
+        <path d="M44.2 -60.6 A75 75 0 1 0 44.2 60.6 A61.5 61.5 0 1 1 44.2 -60.6 Z" fill="url(#lua)" />
       </svg>
     </div>
   )

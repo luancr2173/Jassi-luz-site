@@ -27,16 +27,6 @@ const sans = localFont({
   fallback: ['Helvetica Neue', 'Arial', 'sans-serif'],
 })
 
-const mono = localFont({
-  src: [
-    { path: './fonts/ibm-plex-mono-latin-400-normal.woff2', weight: '400', style: 'normal' },
-    { path: './fonts/ibm-plex-mono-latin-500-normal.woff2', weight: '500', style: 'normal' },
-  ],
-  variable: '--font-mono',
-  display: 'swap',
-  fallback: ['ui-monospace', 'Menlo', 'monospace'],
-})
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: site.seo.title,
@@ -61,7 +51,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f3ede2',
+  themeColor: '#e7ddd1',
   width: 'device-width',
   initialScale: 1,
 }
@@ -82,7 +72,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${serif.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="pt-BR" className={`${serif.variable} ${sans.variable}`}>
       <body>
         <script
           // aplica a preferência de animação antes da pintura, evitando piscar

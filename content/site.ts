@@ -29,7 +29,7 @@ export const site = {
 
   hero: {
     rotulo: 'Acessórios em aço inox · Brasília · Envio para todo o Brasil',
-    // As palavras entre * ficam em itálico dourado
+    // As palavras entre * ficam em itálico oliva
     titulo: ['Joias que', 'não *escurecem.*'],
     subtitulo:
       'Peças delicadas em aço inoxidável pra usar no banho, na academia, no mar e na piscina, e continuar brilhando no dia seguinte.',
@@ -38,10 +38,10 @@ export const site = {
     msg: 'Olá, Jassi! Vi o site e quero conhecer as peças disponíveis.',
   },
 
-  manifesto:
-    'Joia boa é a que você esquece no corpo. Toma banho, vai pra academia, mergulha no mar, e ela continua ali, com a mesma luz do primeiro dia.',
-
   marquee: ['Não oxida', 'Não escurece', 'Não enferruja', 'Hipoalergênico', 'Pode molhar', 'Envio para todo o Brasil'],
+
+  pecasTitulo: ['As *queridinhas*'],
+  pecasTexto: 'Aço inoxidável com acabamento polido, pra ficar no corpo o dia todo. Toque na peça e peça direto no WhatsApp.',
 
   // TODO: preços e disponibilidade de cada peça
   pecas: [
@@ -89,7 +89,8 @@ export const site = {
   ],
 
   porque: {
-    titulo: ['Por que', '*aço inox?*'],
+    titulo: ['Por que *aço inox?*'],
+    texto: 'Joia boa é a que você esquece no corpo. Banho, academia, mar, e ela continua com a luz do primeiro dia.',
     itens: [
       { t: 'Não oxida', d: 'Nada de manchas esverdeadas no pescoço ou na orelha.' },
       { t: 'Não escurece', d: 'O brilho de hoje é o brilho do ano que vem.' },
@@ -115,7 +116,7 @@ export const site = {
   },
 
   final: {
-    titulo: ['Seu próximo brilho', 'é de *aço.*'],
+    titulo: ['Seu próximo brilho é de *aço.*'],
     texto: 'Chama no WhatsApp, fala qual peça te chamou atenção e a gente separa pra você.',
     msg: 'Olá, Jassi! Quero fazer meu primeiro pedido com o cupom PRIMEIRA5.',
   },

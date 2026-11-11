@@ -5,7 +5,7 @@ export default function MotionToggle() {
   const { mode, setMode } = useMotion()
   return (
     <div className="motion-toggle" role="group" aria-label="Animações">
-      <span className="mono">Animações:</span>
+      <span>Animações:</span>
       <button aria-pressed={mode === 'auto'} onClick={() => setMode('auto')}>
         Auto
       </button>
