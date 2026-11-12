@@ -1,7 +1,7 @@
-/* Paleta tirada do logo: bege #e7ddd1, oliva #736115, branco */
+/* Paleta tirada do logo: fundo branco, oliva #736115, bege #e7ddd1 como apoio */
 :root {
-  --bg: #e7ddd1;
-  --bg-2: #efe8de;
+  --bg: #ffffff;
+  --bg-2: #f6f2ec;
   --olive: #736115;
   --olive-2: #5e4f10;
   --ink: #3a300c;
@@ -141,7 +141,7 @@ ol, ul { list-style: none; margin: 0; padding: 0; }
 .btn:hover { background: var(--olive-2); }
 .btn svg { width: 17px; height: 17px; flex: none; }
 .btn--light { background: var(--white); color: var(--olive); }
-.btn--light:hover { background: var(--bg); }
+.btn--light:hover { background: #e7ddd1; }
 
 .link {
   display: inline-flex; align-items: center; gap: 8px;
