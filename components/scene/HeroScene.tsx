@@ -1,16 +1,13 @@
 'use client'
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import * as THREE from 'three'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { PerformanceMonitor, Sparkles } from '@react-three/drei'
-import { motionState } from '../ui/MotionProvider'
 
-const damp = THREE.MathUtils.damp
 const OLIVE = '#736115'
 
-/* ---------- raios de sol do logo ---------- */
+/* ---------- raios de sol do logo (estáticos) ---------- */
 function Rays({ mobile }: { mobile: boolean }) {
-  const group = useRef<THREE.Group>(null)
   const mat = useMemo(
     () => new THREE.MeshBasicMaterial({ color: OLIVE, transparent: true, opacity: 0.55, depthWrite: false }),
     [],
@@ -24,20 +21,8 @@ function Rays({ mobile }: { mobile: boolean }) {
     })
   }, [])
 
-  useFrame((state, dt) => {
-    const g = group.current
-    if (!g) return
-    const p = motionState.heroProgress
-    const t = state.clock.elapsedTime
-    g.rotation.z = damp(g.rotation.z, Math.sin(t * 0.15) * 0.03 - p * 0.2, 3, dt)
-    const s = 1 + p * 0.4
-    g.scale.x = damp(g.scale.x, s, 3, dt)
-    g.scale.y = damp(g.scale.y, s, 3, dt)
-    mat.opacity = damp(mat.opacity, 0.55 * (1 - p), 3, dt)
-  })
-
   return (
-    <group ref={group} position={mobile ? [0, -0.45, -0.6] : [0, 0.36, -0.6]}>
+    <group position={mobile ? [0, -0.45, -0.6] : [0, 0.36, -0.6]}>
       {rays.map((r, i) => (
         <mesh
           key={i}

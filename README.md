@@ -15,7 +15,7 @@ Site one-page de venda para a **Jassi Luz Acessórios** (@jassi_luz), loja de jo
 
 ## Conceito
 
-- **Ideia central:** o logo da marca é um sol nascendo no horizonte. O hero recria esse sol em 3D, só com os raios finos e a linha do horizonte em oliva, com um brilho leve no ar. Com o scroll, os raios giram, se abrem e somem.
+- **Ideia central:** o logo da marca é um sol nascendo no horizonte. O hero recria esse sol em 3D, só com os raios finos e a linha do horizonte em oliva, com um brilho leve no ar. Os raios são estáticos, como no logo.
 - **Paleta (tirada do logo):** bege `#e7ddd1` de fundo, oliva `#736115` como cor da marca (títulos, botões, faixa de benefícios, CTA final e rodapé) e branco sobre o oliva. Texto corrido em oliva escuro `#3a300c`.
 - **Layout minimalista** (referência: capimestrela.com.br): barra de aviso fina, logo centralizado com menu pequeno, grade de produtos com foto quadrada e nome pequeno, seções centralizadas com muito respiro, sem tipografia gigante.
 - **Tipografia:** Cormorant Garamond (ecoa a serifa do logo) nos títulos, com itálico nas palavras de ênfase. Instrument Sans no resto.
